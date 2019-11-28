@@ -16,6 +16,18 @@ This is an example analysis for the 'Robust and Open Analysis in R' workshop.
 We shall be exploring the 'Old Faithful' dataset from Base R. 
 
 
+# Import and save data
+
+First we import the data from the datasets package. 
+```{r}
+df <- datasets::faithful
+```
+
+We can now save this in the `data` folder as a `csv` for maximum interoptability. 
+
+```{r}
+readr::write_csv(x=df, path='data/old_faithfull.csv')
+
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
